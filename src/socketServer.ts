@@ -4,5 +4,9 @@ import { IncomingMessage, Server, ServerResponse } from "http";
 export function createSocketServer(
 	server: Server<typeof IncomingMessage, typeof ServerResponse>
 ) {
-	return new SocketIOServer(server);
+	return new SocketIOServer(server, {
+		cors: {
+			origin: "https://poker-planning-frontend.onrender.com/",
+		},
+	});
 }
