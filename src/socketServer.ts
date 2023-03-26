@@ -6,7 +6,7 @@ export function createSocketServer(
 ) {
 	return new SocketIOServer(server, {
 		cors: {
-			origin: "http://192.168.100.3:5173",
+			origin: "https://poker-planning-frontend.onrender.com/",
 		},
 	});
 }
